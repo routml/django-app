@@ -1,0 +1,12 @@
+{% extends "routml_app/layout.html" %}
+
+{% block body %}
+    <div class="container">
+        <form class="new-url-form" action="{% url 'index' %}" method="POST">
+            {% csrf_token %}
+            <label for="url-input"><a href="/"><strong>rout.ml</strong></a> is a URL shortening service.</label>
+            <input id="url-input" class="url-input" type="url" name="u" placeholder="Paste your original URL here ..." required>
+            <input class="url-submit-btn" type="submit" value="Make it Short!">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "routml_app/layout.html" %}
+
+{% block body %}
+    <div class="container display-ctr">
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Your short URL is:</p>
+        <br>
+        <input id="short_url" class="short-url-input" href="#/" value="{{ url }}" readonly />
+        <br>
+        <button id="copy_btn" class="copy-btn">Copy</button>
+        <br>
+        <p id="copied_status" style="display: none;"><em>Copied!</em></p>
+        <br>
+        <br>
+        <br>
+        <p><a href="/">Return to Home Page</a></p>
+    </div>
+    <script>
+        let copyStatusTimeout = null;
+        document.getElementById("copy_btn").onclick = (event) => {
+            document.getElementById("short_url").select();
+            document.execCommand("copy");
+            clearTimeout(copyStatusTimeout);
+            copyStatusTimeout = window.setTimeout(function() {
+                document.getElementById('copied_status').style.display = 'none';
+            }, 3000);
+            document.getElementById('copied_status').style.display = null;
+        }
+    </script>
+{% endblock %}

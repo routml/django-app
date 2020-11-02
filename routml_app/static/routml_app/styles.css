@@ -1,0 +1,63 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    text-align: center;
+}
+
+.container.error-ctr, .container.display-ctr {
+    flex-direction: column;
+}
+
+.new-url-form {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+    padding: 16px;
+    font-size: 14px;
+    letter-spacing: 0.1ch;
+}
+
+.url-input, .url-submit-btn, .copy-btn, .short-url-input {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.1ch;
+}
+
+.url-submit-btn, .copy-btn {
+    margin: 0;
+    display: inline-block;
+    width: auto;
+    cursor: pointer;
+}
+
+.short-url-input {
+    outline: 0;
+    outline: none;
+    border: 0;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    padding: 0;
+}
