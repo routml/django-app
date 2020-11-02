@@ -1,3 +1,3 @@
-# django-app
+# routml-django-app
 
-A url shortening service.
+This is the backend Django code for rout.ml which is a url shortening service.
