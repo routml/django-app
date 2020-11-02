@@ -29,7 +29,7 @@ def index(request):
             }, status=404)
         
         return render(request, "routml_app/display.html", {
-                "url": "rout.ml/" + encode(url.id)
+                "url": "http://rout.ml/" + encode(url.id)
             })
     
     if request.method == "POST":
